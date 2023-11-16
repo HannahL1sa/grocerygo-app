@@ -1,0 +1,74 @@
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider        = "prisma-client-js"
+}
+
+model GroceryList {
+  id        String  @id @default(auto()) @map("_id") @db.ObjectId
+  user      User    @relation(fields: [userId], references: [id])
+  userId    String  @db.ObjectId
+  items     Item[]   
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  deliveryMethod  DeliveryMethod? 
+  deliveryLocation String?   
+}
+
+enum DeliveryMethod {
+  PICKUP
+  DELIVERY
+}
+
+
+model Item {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  groceryList GroceryList @relation(fields: [groceryListId], references: [id])
+  groceryListId String   @db.ObjectId
+  name         String
+  quantity     String
+}
+
+model Account {
+  id                 String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId             String   @db.ObjectId
+  type               String
+  provider           String
+  providerAccountId  String
+  refresh_token      String?  
+  access_token       String?  
+  expires_at         Int?
+  token_type         String?
+  scope              String?
+  id_token           String?  
+  session_state      String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(auto()) @map("_id") @db.ObjectId
+  sessionToken String   @unique
+  userId       String   @db.ObjectId
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model User {
+  id            String     @id @default(auto()) @map("_id") @db.ObjectId
+  fname         String?
+  lname         String?
+  email         String?   @unique
+  hashedPassword String?
+  emailVerified DateTime?
+  image         String?
+  accounts      Account[]
+  sessions      Session[]
+  groceryLists  GroceryList[]
+}
+
