@@ -4,7 +4,7 @@ The website offers a user-friendly interface for creating personalized grocery l
 
 ## Tech Stack
 
-List of used in the project:
+List of technologies used in the project:
 
 - Frontend and Backend Framework: [Next.js](https://nextjs.org/)
 - CSS Framework: [Tailwind CSS](https://tailwindcss.com/)
