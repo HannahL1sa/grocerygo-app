@@ -1,9 +1,10 @@
 "use client"
 import Link from 'next/link';
+import React, { useState } from 'react';
 import { useSession, signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 
-export default function Header() {
+export default function Header(){
   const router = useRouter();
   
   // Check the user's authentication status
@@ -13,16 +14,15 @@ export default function Header() {
     await signOut({ redirect: false });
     router.push('/'); // Redirect to the home page after signing out
   };
-
   return (
     // Header container with background color and text color styling
-    <header className="bg-emerald-950 text-white pr-10 pl-10">
+    <header className="bg-emerald-950 text-white p-2">
       {/* Navigation bar with flex layout */}
-      <nav className="flex justify-between items-center">
+      <nav className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto">
         {/* Logo section with a link to the home page */}
         <div className="logo">
           <Link href="/">
-            <img src="/app-logo.png" alt="App Logo" className="h-25 w-20" />
+            <img src="/app-logo.png" alt="App Logo" className="h-20 w-20" />
           </Link>
         </div>
         {/* Navigation links with appropriate spacing and font style */}

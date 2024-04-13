@@ -34,14 +34,6 @@ export default function login() {
     
     return (
         <>
-          {/*
-            This example requires updating your template:
-    
-            ```
-            <html class="h-full bg-white">
-            <body class="h-full">
-            ```
-          */}
           <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
               <h2 className="mt-5 text-center text-5xl font-bold leading-12 tracking-tight text-gray-900">
@@ -49,9 +41,7 @@ export default function login() {
               </h2>
               <div className="flex items-center justify-center mt-4 text-lg font-bold">
                 <p>Don't have an account?</p>
-                <a className=" text-indigo-600 hover:text-indigo-500 pl-2" href="/login">
-                Sign Up
-                </a>
+                <a className="text-indigo-600 hover:text-indigo-500 pl-2 " href="/register">Sign Up</a>
               </div>
             </div>
     

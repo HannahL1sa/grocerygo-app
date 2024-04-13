@@ -9,9 +9,10 @@ generator client {
 
 model GroceryList {
   id        String  @id @default(auto()) @map("_id") @db.ObjectId
-  user      User    @relation(fields: [userId], references: [id])
+  user      User    @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   userId    String  @db.ObjectId
-  items     Item[]   
+  items     Cart[] 
+  total     Float   
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
   deliveryMethod  DeliveryMethod? 
@@ -23,13 +24,22 @@ enum DeliveryMethod {
   DELIVERY
 }
 
-
-model Item {
+model Cart {
   id          String    @id @default(auto()) @map("_id") @db.ObjectId
-  groceryList GroceryList @relation(fields: [groceryListId], references: [id])
+  groceryList GroceryList @relation(fields: [groceryListId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   groceryListId String   @db.ObjectId
   name         String
   quantity     String
+  price        Float 
+}
+
+model Item {
+  id          String    @id @default(auto()) @map("_id") @db.ObjectId
+  name         String
+  quantity     String
+  price        Float      
+  category     String    
+  imageUrl     String  
 }
 
 model Account {
