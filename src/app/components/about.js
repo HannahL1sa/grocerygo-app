@@ -15,14 +15,14 @@ export default function about() {
     
             <h3 className="pt-10 text-4xl font-semibold">How It Works:</h3>
             <ol className="pt-4 text-lg list-decimal">
-                <li><strong>Sign Up or Log In:</strong> Get started by creating an account. If you're a returning customer, simply log in to access your personalized dashboard.</li>
+                <li><strong>Sign Up or Log In:</strong> Get started by creating an account. If you are a returning customer, simply log in to access your personalized dashboard.</li>
                 <li><strong>Create Your Grocery List:</strong> Use our easy-to-navigate form to create your grocery list. Specify the items you need, the desired quantities, and any specific instructions.</li>
                 <li><strong>Choose Delivery or Pickup:</strong> Decide whether you want your groceries delivered to your doorstep or if you prefer to pick them up at a nearby location.</li>
-                <li><strong>Submit and Await Confirmation:</strong> Once you've submitted your grocery list, our admin team will review it, send you a bill, and confirm the delivery or pickup details.</li>
+                <li><strong>Submit and Await Confirmation:</strong> Once you have submitted your grocery list, our admin team will review it, send you a bill, and confirm the delivery or pickup details.</li>
                 <li><strong>Track Your Order:</strong> Monitor the status of your order on your dashboard. Receive notifications for order updates, making the entire process transparent and stress-free.</li>
             </ol>
     
-            <p className="pt-5 text-lg">At GroceryGo, we're committed to providing you with a seamless and efficient grocery shopping experience. Say goodbye to the traditional pen-and-paper lists and embrace the convenience of our digital platform.</p>
+            <p className="pt-5 text-lg">At GroceryGo, we are committed to providing you with a seamless and efficient grocery shopping experience. Say goodbye to the traditional pen-and-paper lists and embrace the convenience of our digital platform.</p>
     
             <p className="pt-5 text-lg">Happy shopping!</p>
     

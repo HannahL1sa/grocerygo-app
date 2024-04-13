@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { signIn } from "next-auth/react";
 
-export default function login() {
+export default function Login() {
     const router = useRouter();
+
     const [data, setData] = useState({
         email:'',
         password:''

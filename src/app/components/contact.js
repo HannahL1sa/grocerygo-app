@@ -5,7 +5,7 @@ export default function contact() {
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h1 className="text-5xl font-semibold mb-4 text-center">Contact Us</h1>
             <p className="text-lg mb-8 text-center">
-                  Feel free to get in touch with us using the contact form below. We're here to assist you with any questions or inquiries you may have.
+                  Feel free to get in touch with us using the contact form below. We are here to assist you with any questions or inquiries you may have.
             </p>
             <div className="md:w-full">
             <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
