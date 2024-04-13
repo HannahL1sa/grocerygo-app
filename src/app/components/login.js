@@ -41,7 +41,7 @@ export default function Login() {
                 Log in to your account
               </h2>
               <div className="flex items-center justify-center mt-4 text-lg font-bold">
-                <p>Don't have an account?</p>
+                <p>You have no account?</p>
                 <a className="text-indigo-600 hover:text-indigo-500 pl-2 " href="/register">Sign Up</a>
               </div>
             </div>
