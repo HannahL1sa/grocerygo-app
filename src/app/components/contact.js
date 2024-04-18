@@ -1,6 +1,6 @@
 "use client"
 
-export default function contact() {
+export default function Contact() {
     return (
         <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
             <h1 className="text-5xl font-semibold mb-4 text-center">Contact Us</h1>

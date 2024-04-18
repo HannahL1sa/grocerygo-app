@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useRouter } from 'next/navigation';
 
-export default function register() {
+export default function Register() {
   const router = useRouter();
   const [data, setData] = useState({
       firstName:'',

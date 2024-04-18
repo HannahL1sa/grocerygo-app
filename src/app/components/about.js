@@ -1,6 +1,6 @@
 "use client"
 
-export default function about() {
+export default function About() {
   return (
     <div className="container mx-auto p-6">
             <h1 className="text-5xl font-semibold mb-4">About GroceryGo</h1>

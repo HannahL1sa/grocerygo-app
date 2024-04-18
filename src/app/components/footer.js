@@ -1,5 +1,5 @@
 "use client"
-export default function footer() {
+export default function Footer() {
   return (
       <footer className="bg-emerald-950  text-white mt-auto m- p-0" >
         <div className="flex justify-center p-8">
